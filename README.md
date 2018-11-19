@@ -18,7 +18,7 @@ Project is Developed by:
 * Alexis Jane Hidalgo
 * Mercy Palo
 
-# Bootstrap Template Used
+# Open-source software used to develop the project:
 
 ## Gentella
 Gentelella Admin is a free to use Bootstrap admin template.
@@ -32,3 +32,5 @@ We would love to see how you use this awesome admin template. You can notify us 
 Gentelella is licensed under The MIT License (MIT). Which means that you can use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. But you always need to state that Colorlib is the original author of this template.
 
 Project is developed and maintained by [Colorlib](https://colorlib.com/ "Colorlib - Make Your First Blog") and Aigars Silkalns
+
+## 
