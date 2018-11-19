@@ -12,7 +12,7 @@ design that is composed of the data layer, application layer and the presentatio
 system MySQL will be used for the database and PHP for creating/scripting web pages. The
 proponent also used Adobe Photoshop in designing the user interface.
 
-Proect is Developed by:
+Project is Developed by:
 
 * [Christian Kim Escamilla](https://www.linkedin.com/in/christian-kim-escamilla-b85b35b0/ "Linkedin - Christian Kim Escamilla")
 * Alexis Jane Hidalgo
