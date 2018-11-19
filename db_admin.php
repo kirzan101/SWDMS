@@ -2,7 +2,7 @@
 
 $servername = "localhost";
 $username = "admin";
-$password = "Canaman2018";
+$password = ""; // Add the password
 $dbname = "swdo";
 
 $error = "";
