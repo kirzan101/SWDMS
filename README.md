@@ -1,4 +1,4 @@
-##SWDMS Canaman
+## SWDMS Canaman
 
 
 Social Welfare and Development Managementment System for LGU Canaman is a web-based
@@ -13,7 +13,7 @@ design that is composed of the data layer, application layer and the presentatio
 system MySQL will be used for the database and PHP for creating/scripting web pages. The
 proponent also used Adobe Photoshop in designing the user interface.
 
-## Bootstrap Template Used
+# Bootstrap Template Used
 
 ## Gentella
 Gentelella is licensed under The MIT License (MIT). Which means that you can use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. But you always need to state that Colorlib is the original author of this template.
