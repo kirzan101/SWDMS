@@ -8,7 +8,7 @@ include "../db_connect.php";
 $client_id = $_GET['client_id'];
 $count_no = $_GET['count_no'];
 
-$sql = "SELECT * FROM client c INNER JOIN client_training_details s, interview i WHERE s.client_id = $client_id && c.client_id = $client_id && i.client_id = $client_id && s.client_training_detail_id = $count_no";
+$sql = "SELECT * FROM client c INNER JOIN client_training_details s, interview i WHERE i.interview_id = s.interview_id && s.client_id = $client_id && c.client_id = $client_id && i.client_id = $client_id && s.client_training_detail_id = $count_no";
 $result = $con->query($sql);
 $row = $result->fetch_assoc();
 
