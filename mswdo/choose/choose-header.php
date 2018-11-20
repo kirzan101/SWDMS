@@ -165,7 +165,7 @@ define("BASE_URL","/swdo");
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                          <a type="button" class="btn btn-danger" href="../../../logout.php">Log out</a>
+                          <a type="button" class="btn btn-danger" href="../../logout.php">Log out</a>
                         </div>
 
                       </div>
