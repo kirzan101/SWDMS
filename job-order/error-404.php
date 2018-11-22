@@ -34,7 +34,7 @@
               <p>This page you are looking for does not exist <a href="#">Report this?</a>
               </p>
               <div class="mid_center">
-                <a class="btn btn-round btn-default" href="index.php">Home</a>
+                <a class="btn btn-round btn-default" href="../index.php">Home</a>
               </div>
             </div>
           </div>
