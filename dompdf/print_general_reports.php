@@ -610,12 +610,32 @@ if($con->query($sql)){
 			$transportationamount = $row['total']; 
 			}
 		}
+
+if($con->query($sql)){
+
+			$sql =  "SELECT sum(amount) as total FROM assistance a INNER JOIN client c, interview i, interview_log l, client_death_aid_details d WHERE a.client_id = c.client_id AND a.interview_id = i.interview_id AND a.service_id = 10 AND l.service_id = 10 AND c.status = 'ACTIVE' AND i.interview_id = l.interview_id AND d.category = 'Senior Citizen' AND i.interview_date BETWEEN '$from' AND '$to'";
+			
+			$result = $con->query($sql); 
+			while ($row = $result->fetch_assoc()) { 
+			$deathaidamount = $row['total']; 
+			}
+		}
+
+if($con->query($sql)){
+
+			$sql =  "SELECT sum(amount) as total FROM assistance a INNER JOIN client c, interview i, interview_log l, client_death_aid_details d WHERE a.client_id = c.client_id AND a.interview_id = i.interview_id AND a.service_id = 10 AND l.service_id = 10 AND c.status = 'ACTIVE' AND i.interview_id = l.interview_id AND d.category = 'Person with Disability' AND i.interview_date BETWEEN '$from' AND '$to'";
+			
+			$result = $con->query($sql); 
+			while ($row = $result->fetch_assoc()) { 
+			$deathaidpwdamount = $row['total']; 
+			}
+		}
 		
 if($con->query($sql)){
 
 		$totalm = $burialm + $educationalm + $foodm + $medicalm + $transportationm + $scsrm + $ciclm + $rloam + $livelihoodm + $dwyna_physicalm +$dwyna_sexualm + $dwyna_verbalm + $dwyna_psychologicalm + $dwyna_emotionalm + $dwyna_economicm + $indigencym + $upperm + $middlem + $indigentm + $minorm + $adultm + $seniorm + $deathaidm;
 		$totalf = $burialf + $educationalf + $foodf + $medicalf + $transportationf + $scsrf + $ciclf + $rloaf + $livelihoodf + $dwyna_physicalf +$dwyna_sexualf + $dwyna_verbalf + $dwyna_psychologicalf + $dwyna_emotionalf + $dwyna_economicf + $indigencyf + $upperf + $middlef + $indigentf + $minorf + $adultf + $seniorf + $deathaidf;
-		$totalamount = $burialamount + $educationalamount + $foodamount + $medicalamount + $transportationamount;
+		$totalamount = $burialamount + $educationalamount + $foodamount + $medicalamount + $transportationamount + $deathaidpwdamount + $deathaidamount;
 		
 		}
 
@@ -885,14 +905,14 @@ table, td, th {
             <td style=' text-align: center;'>".$deathaidpwdm."</td>
             <td style=' text-align: center; '>".$deathaidpwdf."</td>
             <td style=' text-align: center;'></td>
-            <td style=' text-align: center;'></td>
+            <td style=' text-align: center;'>".$deathaidpwdamount."</td>
         </tr>
 		<tr>
             <td>&nbsp; *Senior Citizen</td>
             <td style=' text-align: center;'>".$deathaidm."</td>
             <td style=' text-align: center; '>".$deathaidf."</td>
             <td style=' text-align: center;'></td>
-            <td style=' text-align: center;'></td>
+            <td style=' text-align: center;'>".$deathaidamount."</td>
         </tr>
         <tr>
             <td><b>Total:</b></td>
