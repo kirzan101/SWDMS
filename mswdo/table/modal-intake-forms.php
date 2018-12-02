@@ -572,7 +572,7 @@
 		<?php
 		    $client_id = $_GET['client_id']; 
 			
-			$sql = "SELECT * FROM client_scsr_details c INNER JOIN interview i, interview_log l WHERE c.client_id = $client_id && c.interview_id = i.interview_id && i.interview_id = l.interview_id ORDER BY i.interview_id DESC";
+			$sql = "SELECT * FROM client_scsr_details c INNER JOIN interview i, interview_log l, client_general_details g WHERE c.client_id = $client_id && c.interview_id = i.interview_id && i.interview_id = l.interview_id && g.interview_id = i.interview_id ORDER BY i.interview_id DESC";
 			$result = $con->query($sql);
 
 		?>
@@ -588,7 +588,7 @@
 			<?php while($rows = mysqli_fetch_array($result)) { ?>
 			<tr>
 				<td><?php $dmy = date("M d,Y", strtotime($rows['interview_date'])); echo $dmy; ?> | <?php $time = date("h:i A", strtotime($rows['interview_time'])); echo $time; ?></td>
-				<td><?php if ($rows['service_id'] == '13') { echo '<center><a type="button" class="btn btn-danger btn-xs" onclick="window.open(\'../../dompdf/print_general_intake.php?client_id='.$rows['client_id'].'&&count_no='.$rows['client_scsr_detail_id'].'\').print(); return false"><span class="fa fa-print" > Print</span></a></center>'; } else { echo '<center>N/A</center>'; } ?></td>
+				<td><?php if ($rows['service_id'] == '13') { echo '<center><a type="button" class="btn btn-danger btn-xs" onclick="window.open(\'../../dompdf/print_general_intake.php?client_id='.$rows['client_id'].'&&count_no='.$rows['client_general_detail_id'].'\').print(); return false"><span class="fa fa-print" > Print</span></a></center>'; } else { echo '<center>N/A</center>'; } ?></td>
 			</tr>
 			<?php } ?>
 			</tbody>
