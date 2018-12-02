@@ -144,8 +144,8 @@ if(isset($_POST['submit'])){
 			$stmt->close();
 			
 			// Insert to assistance Table
-			$stmt = $con->prepare("INSERT INTO assistance ( client_id, worker_id, service_id, amount, interview_id ) VALUES (?,?,?,?,?)");
-			$stmt->bind_param("iiisi", $client_id, $worker_id, $service_id, $amount, $interview_id);
+			$stmt = $con->prepare("INSERT INTO assistance ( client_id, worker_id, service_id, interview_id ) VALUES (?,?,?,?)");
+			$stmt->bind_param("iiii", $client_id, $worker_id, $service_id, $interview_id);
 			if(!$stmt->execute()){ $con->rollback(); }
 			$stmt->close();
 			
