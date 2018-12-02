@@ -36,9 +36,9 @@ if(isset($_POST['submit'])){
 		// Insert and Update values to MySQL DB	
 
 		// Update to client table
-		$stmt = $con->prepare("UPDATE client SET first_name = ?, middle_name = ?, last_name = ?, sex = ?, age = ?, date_of_birth = ?, place_of_birth = ?, address = ?, educ_attainment = ?, contact_no = ?, civil_status = ?, income = ?, skills = ?, position = ?, family_head = ? ");
-		$stmt->bind_param("sssssssssssssss", $firstname, $middlename, $lastname, $sex, $age, $bday, $bplace, $preadd, $educ, $contactno, $civil, $income, $skill, $position, $family_head);
-		if(!$stmt->execute()){ $con->rollback(); $err = 1; }
+		$stmt = $con->prepare("UPDATE client SET first_name = ?, middle_name = ?, last_name = ?, sex = ?, age = ?, date_of_birth = ?, place_of_birth = ?, address = ?, educ_attainment = ?, contact_no = ?, civil_status = ?, income = ?, skills = ?, position = ?, family_head = ? WHERE client_id = ? ");
+		$stmt->bind_param("sssssssssssssssi", $firstname, $middlename, $lastname, $sex, $age, $bday, $bplace, $preadd, $educ, $contactno, $civil, $income, $skill, $position, $family_head, $client_id);
+		if(!$stmt->execute()){ $con->rollback(); }
 		$stmt->close();
 
 		// Family Update Here
@@ -197,7 +197,7 @@ if(isset($_POST['submit'])){
 			
 			if($con->multi_query($sql)){
 				// Notification if all the data is successfully inserted
-				echo '<script>alert("Client Successfully Updated'.$name1.'");location="../table/edit-client-details.php?client_id='.$client_id.'";</script>';
+				echo '<script>alert("Client Successfully Updated");location="../table/edit-client-details.php?client_id='.$client_id.'";</script>';
 			}
 			else if ( $err == 1){
 				// Rollback the transaction
