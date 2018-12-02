@@ -64,7 +64,7 @@
 			}
 			else{
 				$con->rollback(); 
-				echo '<script>alert("User Unsuccessfully Registered");location="insert-profile.php";</script>';
+				echo '<script>alert("User Unsuccessfully Registered");location="../table/index.php";</script>';
 			}
 			$stmt->close();	
 					
