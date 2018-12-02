@@ -9,7 +9,7 @@ $client_id = $_GET['client_id'];
 $count_no = $_GET['count_no'];
 $service_no = $_GET['service_no'];
 
-$sql = "SELECT * FROM client c INNER JOIN assistance s, interview i, client_general_details g WHERE s.client_id = $client_id && c.client_id = $client_id && i.client_id = $client_id && i.interview_id = s.interview_id && s.assistance_id = $count_no && c.client_id = g.client_id && s.interview_id = g.interview_id";
+$sql = "SELECT * FROM client c INNER JOIN assistance s, interview i, client_general_details g WHERE s.client_id = $client_id && c.client_id = $client_id && i.client_id = $client_id && i.interview_id = s.interview_id && g.client_general_detail_id = $count_no && c.client_id = g.client_id && s.interview_id = g.interview_id";
 $result = $con->query($sql);
 $row = $result->fetch_assoc();
 
