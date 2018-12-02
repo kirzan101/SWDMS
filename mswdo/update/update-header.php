@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if($_SESSION['user_type'] != 'M' || $_SESSION['user_type'] == NULL){
-	header("Location: error-404.php");
+	header("Location: ../error-404.php");
 }
 
 $worker_name = $_SESSION['name_of_user'];
