@@ -165,7 +165,7 @@ if(isset($_POST['submit'])){
 			 
 			// Insert to activity_log Table 
 			$sql = " INSERT INTO activity_log ( activity_date, details )
-						 VALUES ( now() , ' $worker_name registered New Client named $firstname $lastname in Social Case Study Report' )";
+						 VALUES ( now() , ' $worker_name registered New Client named $firstname $lastname in Issuance of Solo Parent & Person with Disability ID' )";
 
 			
 			if($con->multi_query($sql)){
