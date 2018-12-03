@@ -143,35 +143,35 @@ $(document).ready(function() {
 
 function myFunctionss() {
     document.getElementById("link1").removeAttribute("href"); 
-	document.getElementById("link1").setAttribute("href","../filled/choose-aics.php?serivice_id=1&&client_id=");
+	document.getElementById("link1").setAttribute("href","../choose/choose-aics.php?serivice_id=1&&client_id=");
 	document.getElementById("link2").removeAttribute("href"); 
-	document.getElementById("link2").setAttribute("href","../filled/choose-aics.php?serivice_id=2&&client_id="); 
+	document.getElementById("link2").setAttribute("href","../choose/choose-aics.php?serivice_id=2&&client_id="); 
 	document.getElementById("link3").removeAttribute("href"); 
-	document.getElementById("link3").setAttribute("href","../filled/choose-aics.php?serivice_id=3&&client_id="); 
+	document.getElementById("link3").setAttribute("href","../choose/choose-aics.php?serivice_id=3&&client_id="); 
 	document.getElementById("link4").removeAttribute("href"); 
-	document.getElementById("link4").setAttribute("href","../filled/choose-aics.php?serivice_id=4&&client_id="); 
+	document.getElementById("link4").setAttribute("href","../choose/choose-aics.php?serivice_id=4&&client_id="); 
 	document.getElementById("link5").removeAttribute("href"); 
-	document.getElementById("link5").setAttribute("href","../filled/choose-aics.php?serivice_id=5&&client_id="); 
+	document.getElementById("link5").setAttribute("href","../choose/choose-aics.php?serivice_id=5&&client_id="); 
 	document.getElementById("link6").removeAttribute("href"); 
-	document.getElementById("link6").setAttribute("href","../filled/choose-cicl.php?serivice_id=6&&client_id="); 
+	document.getElementById("link6").setAttribute("href","../choose/choose-cicl.php?serivice_id=6&&client_id="); 
 	document.getElementById("link7").removeAttribute("href"); 
-	document.getElementById("link7").setAttribute("href","../filled/choose-dascpd.php?client_id="); 
+	document.getElementById("link7").setAttribute("href","../choose/choose-dascpd.php?client_id="); 
 	document.getElementById("link8").removeAttribute("href"); 
-	document.getElementById("link8").setAttribute("href","../filled/choose-dwyna.php?client_id="); 
+	document.getElementById("link8").setAttribute("href","../choose/choose-dwyna.php?client_id="); 
 	document.getElementById("link9").removeAttribute("href"); 
-	document.getElementById("link9").setAttribute("href","../filled/choose-indigency.php?client_id="); 
+	document.getElementById("link9").setAttribute("href","../choose/choose-indigency.php?client_id="); 
 	document.getElementById("link10").removeAttribute("href"); 
-	document.getElementById("link10").setAttribute("href","../filled/choose-livelihood.php?client_id="); 
+	document.getElementById("link10").setAttribute("href","../choose/choose-livelihood.php?client_id="); 
 	document.getElementById("link11").removeAttribute("href"); 
-	document.getElementById("link11").setAttribute("href","../filled/choose-pre-marriage.php?client_id="); 
+	document.getElementById("link11").setAttribute("href","../choose/choose-pre-marriage.php?client_id="); 
 	document.getElementById("link12").removeAttribute("href"); 
-	document.getElementById("link12").setAttribute("href","../filled/choose-pwd.php?client_id="); 
+	document.getElementById("link12").setAttribute("href","../choose/choose-pwd.php?client_id="); 
 	document.getElementById("link13").removeAttribute("href"); 
-	document.getElementById("link13").setAttribute("href","../filled/choose-solo-parent.php?client_id="); 
+	document.getElementById("link13").setAttribute("href","../choose/choose-solo-parent.php?client_id="); 
 	document.getElementById("link14").removeAttribute("href"); 
-	document.getElementById("link14").setAttribute("href","../filled/choose-rloa.php?client_id="); 
+	document.getElementById("link14").setAttribute("href","../choose/choose-rloa.php?client_id="); 
 	document.getElementById("link15").removeAttribute("href"); 
-	document.getElementById("link15").setAttribute("href","../filled/choose-scsr.php?client_id="); 
+	document.getElementById("link15").setAttribute("href","../choose/choose-scsr.php?client_id="); 
 }
 
   
